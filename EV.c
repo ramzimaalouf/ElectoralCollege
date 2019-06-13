@@ -23,6 +23,7 @@
 #include <string.h>
 #include <getopt.h>
 #include <fcntl.h>
+#include <stdint.h>
 #include "globals.h"
 #include "RamziTime.h"
 #include "states.h"
@@ -49,8 +50,8 @@ static struct option long_options[] =
 /* prototypes */
 void Usage (char *Name);
 void Version (char *Name);
-unsigned int NumberOfElectoralVotes (unsigned long States_In, char PreDisposition);
-void PrintStates(unsigned long States_In);
+unsigned int NumberOfElectoralVotes (uint64_t States_In, char PreDisposition);
+void PrintStates(uint64_t States_In);
 
 int main(int argc, char *argv[])
 {
@@ -59,8 +60,8 @@ int main(int argc, char *argv[])
   int t_iError = 0;
   int t_uiCount = 0;
   unsigned int t_uiElectoralVotes = 0;
-  unsigned long t_ulStates = 0;
-  unsigned long t_ulNumberOfCombinations = 0;
+  uint64_t t_ulStates = 0;
+  uint64_t t_ulNumberOfCombinations = 0;
   g_iVerboseFlag = DEFAULT_VERBOSE_FLAG;
 
   if (argc == 1) {
@@ -94,7 +95,7 @@ int main(int argc, char *argv[])
   if (t_iError == 0) {
 	if (g_iVerboseFlag > 0) { Version(argv[0]); }
   }
-  for (t_ulStates = ((unsigned long) 1<<STATES_N)  ;
+  for (t_ulStates = ((uint64_t) 1<<STATES_N)  ;
                     t_ulStates > 0;
                     --t_ulStates) {
   if ((t_uiElectoralVotes = NumberOfElectoralVotes (t_ulStates,'r'))
@@ -108,7 +109,7 @@ int main(int argc, char *argv[])
   return t_iError;
 }
 
-unsigned int NumberOfElectoralVotes (unsigned long States_In, char PreDisposition)
+unsigned int NumberOfElectoralVotes (uint64_t States_In, char PreDisposition)
 {
   unsigned int t_uiReturn = 0;
   unsigned int t_uiCount = 0;
@@ -119,7 +120,7 @@ unsigned int NumberOfElectoralVotes (unsigned long States_In, char PreDispositio
   return t_uiReturn;
 }
 
-void PrintStates(unsigned long States_In)
+void PrintStates(uint64_t States_In)
 {
   unsigned int t_uiCount = 0;
 

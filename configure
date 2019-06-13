@@ -3581,8 +3581,8 @@ if test "x$ac_cv_header_math_h" = xyes; then :
 fi
 
 
-ac_fn_c_check_header_mongrel "$LINENO" "inttypes.h" "ac_cv_header_inttypes_h" "$ac_includes_default"
-if test "x$ac_cv_header_inttypes_h" = xyes; then :
+ac_fn_c_check_header_mongrel "$LINENO" "stdint.h" "ac_cv_header_stdint_h" "$ac_includes_default"
+if test "x$ac_cv_header_stdint_h" = xyes; then :
 
 fi
 
@@ -3633,12 +3633,6 @@ _ACEOF
 else
   as_fn_error $? "math library not found" "$LINENO" 5
 fi
-
-ac_fn_c_check_header_mongrel "$LINENO" "pthread.h" "ac_cv_header_pthread_h" "$ac_includes_default"
-if test "x$ac_cv_header_pthread_h" = xyes; then :
-
-fi
-
 
 
 # The cast to long int works around a bug in the HP C Compiler
