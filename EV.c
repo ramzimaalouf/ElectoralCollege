@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2019 Ramzi Maalouf
+ * Copyright 2019 Ramzi Maalouf. All rights reserved.
  *
  * File Name : EV.c
  *
@@ -7,13 +7,12 @@
  *
  * Version : 0.1.0
  *
- * Created Date : August 25 2018
+ * Created Date : 06/15/2019
  *
  * Modification History :
- *    0.1    RSM    Initial Release
+ *    0.1    RSM             -- Initial Release
  *
  ******************************************************************************/
-
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
@@ -61,7 +60,7 @@ int main(int argc, char *argv[])
   int t_uiCount = 0;
   unsigned int t_uiElectoralVotes = 0;
   unsigned long t_ulStates = 0;
-
+  unsigned long t_ulNumberOfCombinations = 0;
   g_iVerboseFlag = DEFAULT_VERBOSE_FLAG;
 
   if (argc == 1) {
@@ -100,10 +99,12 @@ int main(int argc, char *argv[])
                     --t_ulStates) {
   if ((t_uiElectoralVotes = NumberOfElectoralVotes (t_ulStates,'r'))
       >= MINIMUM_EV_TO_WIN) {
-    fprintf(stdout,"\n\nPattern 0x%lx: %d\n",t_ulStates,t_uiElectoralVotes) ;
-    PrintStates(t_ulStates);
+   /* fprintf(stdout,"\n\nPattern 0x%lx: %d\n",t_ulStates,t_uiElectoralVotes) ;
+    PrintStates(t_ulStates); */
+    t_ulNumberOfCombinations ++;
   }
   }
+  fprintf(stdout,"Number of Combinations %lu",t_ulNumberOfCombinations);
   return t_iError;
 }
 

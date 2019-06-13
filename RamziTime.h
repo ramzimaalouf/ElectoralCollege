@@ -1,18 +1,17 @@
 /*******************************************************************************
- * Copyright 2018 Bose Incorporated. All rights reserved.
- * 
- * File Name : time.h
- * 
- * Description : 
- *  -- This is file is the prototype CompileTime/CompileDate variables.
- * 
+ * Copyright 2019 Ramzi Maalouf. All rights reserved.
+ *
+ * File Name : RamziTime.h
+ *
+ * Description :
+ *
  * Version : 0.1.0
- * 
- * Created Date : August 25 2018
- * 
+ *
+ * Created Date : 06/15/2019
+ *
  * Modification History :
- *    0.1    RSM    Initial Release
- * 
+ *    0.1    RSM             -- Initial Release
+ *
  ******************************************************************************/
 
 extern char CompileTime[];

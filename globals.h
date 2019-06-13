@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2018 Bose Incorporated. All rights reserved.
+ * Copyright 2019 Ramzi Maalouf. All rights reserved.
  *
  * File Name : globals.h
  *
@@ -7,7 +7,7 @@
  *
  * Version : 0.1.0
  *
- * Created Date : 08/15/2018
+ * Created Date : 06/15/2019
  *
  * Modification History :
  *    0.1    RSM             -- Initial Release

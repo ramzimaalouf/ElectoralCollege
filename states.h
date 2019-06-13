@@ -1,4 +1,18 @@
-
+/*******************************************************************************
+ * Copyright 2019 Ramzi Maalouf. All rights reserved.
+ *
+ * File Name : states.h
+ *
+ * Description :
+ *
+ * Version : 0.1.0
+ *
+ * Created Date : 06/15/2019
+ *
+ * Modification History :
+ *    0.1    RSM             -- Initial Release
+ *
+ ******************************************************************************/
 #if !defined(STATES_H_)
 #define STATES_H_
 
