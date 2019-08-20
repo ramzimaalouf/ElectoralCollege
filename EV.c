@@ -100,8 +100,10 @@ int main(int argc, char *argv[])
                     --t_ulStates) {
   if ((t_uiElectoralVotes = NumberOfElectoralVotes (t_ulStates,'r'))
       >= MINIMUM_EV_TO_WIN) {
-   /* fprintf(stdout,"\n\nPattern 0x%lx: %d\n",t_ulStates,t_uiElectoralVotes) ;
-    PrintStates(t_ulStates); */
+   if (g_iVerboseFlag >= 4*DEFAULT_VERBOSE_FLAG) {
+      fprintf(stdout,"\n\nPattern 0x%lx: %d\n",t_ulStates,t_uiElectoralVotes) ;
+   }
+    PrintStates(t_ulStates); 
     t_ulNumberOfCombinations ++;
   }
   }
